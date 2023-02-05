@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="Assets/favicon/site.webmanifest">
+    <style>
+           *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: 'helvatica' sans-serif;
+           }
+           nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav img{
+            width: 100px;
+        }
+        .nav-links{
+            flex: 1;
+            text-align: right;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+        .nav-links ul li a{
+            color: orangered;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .nav-links ul li a:hover{
+            background-color: salmon;
+            color: #fff;
+        }
+        nav .fa{
+           display: none;
+       }
+           .Contact{
+                   position: relative;
+                   min-height: 100vh;
+                   padding: 50px 100px;
+                   display: flex;
+                   justify-content: center;
+                   align-items: center;
+                   flex-direction: column;
+                   background: url(Assets/contact\ us\ bg.jpeg);
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-attachment: fixed;
+           }
+           .Contact .content{
+               max-width: 800px;
+               text-align: center;
+           }
+           .Contact .content h2{
+               font-size: 48px;
+               font-weight: 500;
+               color: #00bcd4;
+               }
+            .Contact .content p{
+                font-weight: 300;
+                color: #fff;
+                font-size: 24px;
+            }
+            .Contact .content h3{
+                font-size: 36px;
+                font-weight: 400;
+                color: #fff;
+            }
+            .container{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 30px;
+            }
+           .container .ContactInfo{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+            }
+            .container .ContactInfo .box{
+                position: relative;
+                padding: 20px 0;
+                display: flex;
+            }
+            .container .ContactInfo .box .icon{
+                min-width: 60px;
+                height: 60px;
+                background:#fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                font-size: 22px;
+            }
+            .container .ContactInfo .box .text{
+                display: flex;
+                margin-left: 20px;
+                font-size: 16px;
+                color: #fff;
+                flex-direction: column;
+                font-weight: 300;
+            }
+            .container .ContactInfo .box .text h3{
+                font-weight: 500;
+                color: #00bcd4;
+            }
+            .container .ContactInfo .box .text .mail{
+                color: #fff;
+                text-decoration: none;
+            }
+            .container .ContactInfo .box .text .mail:hover{
+                color: rgb(245, 115, 245);
+            }
+            .container .ContactInfo .box .text #Telegram{
+                color: #fff;
+                text-decoration: none;
+            }
+            .container .ContactInfo .box .text #Telegram:hover{
+                color: rgb(245, 115, 245);
+            }
+            .container .ContactInfo .box .text .phone{
+                color:#fff;
+                text-decoration: none;
+            }
+            .container .ContactInfo .box .text .phone:hover{
+                color:rgb(245,115, 245);
+            }
+            .container .ContactInfo .box .text .GoogleForm{
+                color: #fff;
+                text-decoration: none;
+            }
+            .container .ContactInfo .box .text .GoogleForm:hover{
+                color:rgb(245,115, 245);
+            }
+
+            .ContactForm{
+                width: 40%;
+                padding: 40px;
+                background: #fff;
+                justify-content: center;
+                align-items: center;
+            }
+            .ContactForm h2{
+                font-size: 30px;
+                color: #333;
+                font-weight: 500;
+            }
+            .ContactForm .InputBox{
+                position: relative;
+                width: 100%;
+                margin-top: 10px;
+            }
+            .ContactForm .InputBox input, .ContactForm .InputBox textarea{
+                width: 100%;
+                padding: 5px 0;
+                font-size: 16px;
+                margin: 10px 0;
+                border: none;
+                border-bottom: 2px solid #333;
+                outline: none;
+                resize: none;
+            }
+            .ContactForm .InputBox span{
+                position: absolute;
+                left: 0;
+                padding: 5px 0;
+                font-size: 16px;
+                margin: 10px 0;
+                pointer-events: none;
+                transition: 0.5s;
+                color: #666;
+            }
+            .ContactForm .InputBox input:focus ~ span,
+            .ContactForm .InputBox input:valid ~ span, 
+            .ContactForm .InputBox textarea:focus ~ span,
+            .ContactForm .InputBox textarea:valid ~ span{
+                color: #e91e63;
+                font-size: 12px;
+                transform: translateY(-20px);
+            }
+            .ContactForm .InputBox input[type="submit"] {
+                width: 100px;
+                background: #00bcd4;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                padding: 10px;
+                font-size: 18px;
+            }
+            .ContactForm .InputBox input[type="submit"]:hover{
+                background-color: #00bc;
+            }
+            @media (max-width:700px){
+                .Contact{
+                    padding: 50px;
+                }
+                .container{
+                    flex-direction: column;
+                }
+                .container .ContactInfo{
+                    margin-bottom: 40px;
+                }
+                .container .ContactInfo,
+                .ContactForm{
+                    width: 100%;
+                }
+                .nav-links ul li{
+               display: block;
+           }
+           .nav-links{
+               position: absolute;
+               background:wheat;
+               height: 100vh;
+               width: 200px;
+               top: 0;
+               right: -200px;
+               text-align: left;
+               z-index:2;
+               transition: 1s;
+           }
+           nav .fa{
+               display: block;
+               color: black;
+               margin: 10px;
+               font-size: 22px;
+               cursor: pointer;
+           }
+           .nav-links ul{
+               padding: 30px;
+           }
+            }
+    </style>
+</head>
+<body>
+    <section class="Contact">
+    <nav>
+        <img src="Assets/Logo.jpg">
+        <div class="nav-links" id="navLinks"><i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="City.html">Cities</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars"onclick="showMenu()"></i>
+    </nav>
+    
+        <div class="content">
+            <h2>
+                Contact Us
+            </h2>
+            <br>
+            <br>
+            <p class="1">
+                Ask for help here
+            </p>
+            <p class="2">
+                Email us with your queries and questions, we will be happy to solve your doubts.
+            </p>
+            <br>
+            <h3>Let's start a conversation</h3>
+        </div>
+        <div class="container">
+            <div class="ContactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope-o"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <a class="mail" href="https://mail.google.com/mail/?to=maass561011@gmail.com&bcc=admin@example.com&subject=Hey#compose" target="_blank">maass561011@gmail.com</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone no</h3>
+                        <a class="phone" href="tel:+917709200288">+917709200288</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-telegram"></i></div>
+                    <div class="text">
+                        <h3>Telegram</h3>
+                        <a id="Telegram" href="https://t.me/ClickonCake" target="_blank">Click here to join</a>
+                    </div>    
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-file-text"></i></div>
+                    <div class="text">
+                        <h3>Google Form</h3>
+                        <a class="GoogleForm" href="https://forms.gle/AJD75JVETZSoxZQv6" target="_blank">Click here</a>   
+                </div>
+            </div>
+        </div>
+        <div class="ContactForm">
+            <form>
+                <h2>Send Message</h2>
+                <div class="InputBox">
+                    <input type="text" name="" required="required">
+                    <span>Full Name </span>
+                </div>
+                <div class="InputBox">
+                    <input type="email" name="" required="required">
+                    <span>Email </span>
+                </div>
+                <div class="InputBox">
+                    <textarea required="required"></textarea>
+                    <span>Type your Message... </span>
+                </div>
+                <div class="InputBox">
+                    <input type="submit" name="" value="Send">
+                </div>
+            </form>
+        </div>
+    </section>
+     <!-------------JavaScript for Toggle Menu------------>
+     <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>  
+</body>
+</html>
